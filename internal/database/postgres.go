@@ -45,12 +45,13 @@ func Close() {
 }
 
 // Function for returning *sql.DB for checking DB connection in other packages
-// func DB() *sql.DB {
-// 	if db == nil {
-// 		log.Println("DB() returning nil")
-// 	}
-// 	return db
-// }
+func DB() *sql.DB {
+	if db == nil {
+		log.Println("DB() returning nil")
+	}
+
+	return db
+}
 
 // Function to check if the database is open
 func CheckDatabaseConnection() {
